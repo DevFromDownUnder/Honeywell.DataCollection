@@ -6,12 +6,12 @@ using Android.App;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Honeywell.DataCollection")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("DevFromDownUnder.Honeywell.DataCollection")]
+[assembly: AssemblyDescription("Data collection library missing from Honeywell Xamarin SDK")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Honeywell.DataCollection")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyProduct("DevFromDownUnder.Honeywell.DataCollection")]
+[assembly: AssemblyCopyright("Copyright © DevFromDownUnder 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
