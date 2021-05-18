@@ -37,7 +37,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)\Honeywell.DataCollection\bin\$(buildConfiguration)\'
+    SourceFolder: '$(Build.SourcesDirectory)\Honeywell.DataCollection\'
     Contents: 'DevFromDownUnder.Honeywell.DataCollection.nuspec'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
