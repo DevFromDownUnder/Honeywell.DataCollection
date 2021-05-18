@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>DevFromDownUnder.Honeywell.DataCollection</id>
+    <version>4.0.0</version>
+    <title>DevFromDownUnder.Honeywell.DataCollection</title>
+    <authors>DevFromDownUnder</authors>
+    <owners>DevFromDownUnder</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/DevFromDownUnder/Honeywell.DataCollection</projectUrl>
+    <iconUrl>https://www.nuget.org/profiles/DevFromDownUnder/avatar</iconUrl>
+    <description>Data collection library missing from Honeywell Xamarin SDK.</description>
+    <copyright></copyright>
+    <tags>Honeywell DataCollection Scanner SDK</tags>
+    <dependencies />
+  </metadata>
+</package>
