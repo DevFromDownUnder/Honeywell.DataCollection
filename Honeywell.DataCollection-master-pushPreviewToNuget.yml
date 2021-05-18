@@ -31,7 +31,7 @@ steps:
 
 - task: ExecutableInfoReader@1
   inputs:
-    fileName: '$(Build.SourcesDirectory)\Honeywell.DataCollection\Properties\AssemblyInfo.cs'
+    fileName: '$(Build.SourcesDirectory)\Honeywell.DataCollection\bin\$(buildConfiguration)\DevFromDownUnder.Honeywell.DataCollection.dll'
     variableRoot: 'Honeywell.DataCollection'
     loadProductVersion: false
     loadAssemblyVersion: true
