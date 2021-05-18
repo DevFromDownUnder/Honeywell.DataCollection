@@ -22,10 +22,12 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-
-- task: projectversionasvariable@1
+    
+- task: ExecutableInfoReader@1
   inputs:
-    path: '$(releaseProject)'
+    fileName: '$(Build.SourcesDirectory)\Honeywell.DataCollection\Properties\AssemblyInfo.cs'
+    loadProductVersion: false
+    loadAssemblyVersion: true
 
 - task: VSBuild@1
   inputs:
@@ -42,7 +44,7 @@ steps:
       --output $(Build.ArtifactStagingDirectory)
       --no-build
       /p:Configuration=$(buildConfiguration)
-      /p:PackageVersion=$(Version.MajorMinorBuild)-preview-$(timestamp)
+      /p:PackageVersion=$(Foo.AssemblyVersionInfo.Version)-preview-$(timestamp)
       /p:PackageId=DevFromDownUnder.Honeywell.DataCollection
 
 - task: DotNetCoreCLI@2
