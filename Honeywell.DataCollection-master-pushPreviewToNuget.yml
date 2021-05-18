@@ -45,8 +45,7 @@ steps:
     configuration: '$(buildConfiguration)'
     msbuildArguments: >
       -t:pack
-      --output $(Build.ArtifactStagingDirectory)
-      --no-build
+      /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)
       /p:Configuration=$(buildConfiguration)
       /p:PackageVersion=$(Honeywell.DataCollection.AssemblyVersionInfo.Version)-preview-$(timestamp)
       /p:PackageId=DevFromDownUnder.Honeywell.DataCollection
