@@ -36,6 +36,21 @@ steps:
     loadProductVersion: false
     loadAssemblyVersion: true
 
+
+- task: MSBuild@1
+  inputs:
+    solution: '$(releaseProject)'
+    msbuildArchitecture: 'x64'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    msbuildArguments: >
+      -t:pack
+      --output $(Build.ArtifactStagingDirectory)
+      --no-build
+      /p:Configuration=$(buildConfiguration)
+      /p:PackageVersion=$(Honeywell.DataCollection.AssemblyVersionInfo.Version)-preview-$(timestamp)
+      /p:PackageId=DevFromDownUnder.Honeywell.DataCollection
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'custom'
