@@ -10,10 +10,14 @@
     <license type="expression">MIT</license>
     <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
     <projectUrl>https://github.com/DevFromDownUnder/Honeywell.DataCollection</projectUrl>
+    <repository url="https://github.com/DevFromDownUnder/Honeywell.DataCollection" />
     <iconUrl>https://www.nuget.org/profiles/DevFromDownUnder/avatar</iconUrl>
     <description>Data collection library missing from Honeywell Xamarin SDK.</description>
     <copyright></copyright>
     <tags>Honeywell DataCollection Scanner SDK</tags>
     <dependencies />
   </metadata>
+  <files>
+    <file src="DevFromDownUnder.Honeywell.DataCollection.dll" />
+  </files>
 </package>
