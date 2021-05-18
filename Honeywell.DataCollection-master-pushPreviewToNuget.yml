@@ -29,12 +29,29 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)\Honeywell.DataCollection\bin\$(buildConfiguration)\'
+    Contents: 'DevFromDownUnder.Honeywell.DataCollection.dll'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)\Honeywell.DataCollection\bin\$(buildConfiguration)\'
+    Contents: 'DevFromDownUnder.Honeywell.DataCollection.nuspec'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
 - task: ExecutableInfoReader@1
   inputs:
-    fileName: '$(Build.SourcesDirectory)\Honeywell.DataCollection\bin\$(buildConfiguration)\DevFromDownUnder.Honeywell.DataCollection.dll'
+    fileName: '$(Build.ArtifactStagingDirectory)\DevFromDownUnder.Honeywell.DataCollection.dll'
     variableRoot: 'Honeywell.DataCollection'
     loadProductVersion: false
     loadAssemblyVersion: true
+
+- task: SimpleNuspecVersionSetter@1
+  inputs:
+    RootDirectory: '$(Build.ArtifactStagingDirectory)'
+    NewVersion: '$(packageVersion)'
 
 - task: VariableSetTask@1
   inputs:
@@ -45,9 +62,10 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
-    packagesToPack: '$(releaseProject)'
+    packagesToPack: '$(Build.ArtifactStagingDirectory)\DevFromDownUnder.Honeywell.DataCollection.nuspec'
     versioningScheme: 'byEnvVar'
     versionEnvVar: 'packageVersion'
+    basePath: '$(Build.ArtifactStagingDirectory)'
 
 - task: DotNetCoreCLI@2
   inputs:
