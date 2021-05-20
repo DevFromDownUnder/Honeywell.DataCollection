@@ -17,7 +17,4 @@
     <tags>Honeywell DataCollection Scanner SDK</tags>
     <dependencies />
   </metadata>
-  <files>
-    <file src="DevFromDownUnder.Honeywell.DataCollection.dll" />
-  </files>
 </package>
