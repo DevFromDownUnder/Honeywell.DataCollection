@@ -33,7 +33,7 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)\Honeywell.DataCollection\bin\$(buildConfiguration)\'
     Contents: '*'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)\nuget\lib\MonoAndroid41'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)\nuget'
 
 - task: CopyFiles@2
   inputs:
@@ -43,7 +43,7 @@ steps:
 
 - task: ExecutableInfoReader@1
   inputs:
-    fileName: '$(Build.ArtifactStagingDirectory)\nuget\lib\MonoAndroid41\DevFromDownUnder.Honeywell.DataCollection.dll'
+    fileName: '$(Build.ArtifactStagingDirectory)\nuget\DevFromDownUnder.Honeywell.DataCollection.dll'
     variableRoot: 'Honeywell.DataCollection'
     loadProductVersion: false
     loadAssemblyVersion: true
