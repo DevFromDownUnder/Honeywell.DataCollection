@@ -32,8 +32,8 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)\Honeywell.DataCollection\bin\$(buildConfiguration)\'
-    Contents: 'DevFromDownUnder.Honeywell.DataCollection.dll'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    Contents: '*'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)\lib'
 
 - task: CopyFiles@2
   inputs:
@@ -43,7 +43,7 @@ steps:
 
 - task: ExecutableInfoReader@1
   inputs:
-    fileName: '$(Build.ArtifactStagingDirectory)\DevFromDownUnder.Honeywell.DataCollection.dll'
+    fileName: '$(Build.ArtifactStagingDirectory)\lib\DevFromDownUnder.Honeywell.DataCollection.dll'
     variableRoot: 'Honeywell.DataCollection'
     loadProductVersion: false
     loadAssemblyVersion: true
