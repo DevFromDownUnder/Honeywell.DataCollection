@@ -19,6 +19,5 @@
   </metadata>
   <files>
     <file src="nuget\DevFromDownUnder.Honeywell.DataCollection.dll" target="lib\MonoDroid41" />
-    <file src="nuget\DevFromDownUnder.Honeywell.DataCollection.xml" target="lib\MonoDroid41" />
   </files>
 </package>
