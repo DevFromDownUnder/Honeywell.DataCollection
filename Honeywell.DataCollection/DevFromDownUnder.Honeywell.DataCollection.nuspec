@@ -17,4 +17,7 @@
     <tags>Honeywell DataCollection Scanner SDK</tags>
     <dependencies />
   </metadata>
+    <files>
+        <file src="nuget\**" target="build" />
+    </files>
 </package>
